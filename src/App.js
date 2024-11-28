@@ -163,6 +163,8 @@ function App() {
     await addPageContent("page-3");
     pdf.addPage();
     await addPageContent("page-4");
+     pdf.addPage();
+     await addPageContent("page-5");
 
     pdf.save("pageletter.pdf");
   };
@@ -491,7 +493,7 @@ function App() {
         </h3>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <p>
-            Dear {formData.firstName}
+            Dear {formData.firstName} {' '}
             {formData.lastName},
           </p>
           <p>{moment(formData.joiningDate).format("MMMM DD, YYYY")}</p>
@@ -530,8 +532,9 @@ function App() {
 
         <h3>Location</h3>
         <p>
-          Head office located at 127, 3rd Floor, DG Square,
-          Pallavaram-Thoraipakkam road, Keelkattalai, Chennai, Tamil Nadu 600117
+          Head office located at Featherlite, The address,Block A, 6th floor, Unit no : 601, Featherlite
+          The Address, Survey No 203/10B, 200ft, Road, Zamin Pallavaram, MMRD,
+          Chennai, Tamil Nadu 600044
         </p>
         <h3>Compensation and Benefit</h3>
         <h3>Salary</h3>
@@ -627,32 +630,32 @@ function App() {
           by TSI India leave policy announced from time to time. Further details
           will be provided to you at the time of joining. Notice period.
         </p>
-        <li>
-          <ul>
-            1. In case of your resignation from the services of the Company, the
+        <ol>
+          <li>
+            In case of your resignation from the services of the Company, the
             Company at its sole discretion shall have a right, but not an
             obligation, to waive off the notice period and in such cases the
             Company will not be liable to make any payment of salary to the
             employee in lieu of the waived off notice period.
-          </ul>
-          <ul>
-            2. During notice period, leave will not be permitted except in case
+          </li>
+          <li>
+            During notice period, leave will not be permitted except in case
             of medical emergency. Payment in lieu of unserved notice period will
             be recovered from the employee or notice period may get extended.
-          </ul>
-          <ul>
-            3. At the time of termination of your employment contract, you are
+          </li>
+          <li>
+            At the time of termination of your employment contract, you are
             required to return to the Company in acceptable conditions all such
             properties of the Company which are in your possession.
-          </ul>
-          <ul>
-            4. You agree that following the notice of termination of your
+          </li>
+          <li>
+            You agree that following the notice of termination of your
             employment, you shall cooperate fully with the Company and to the
             satisfaction of the Company in all matters relating to your 3
             employment with the Company and the orderly transition of such work
             to such other employees / persons as the Company may designate.
-          </ul>
-        </li>
+          </li>
+        </ol>
       </div>
       <div
         id="page-3"
@@ -733,7 +736,7 @@ function App() {
               justifyContent: "space-between",
               alignItems: "flex-start",
               padding: "20px",
-              width:'100%',
+              width: "100%",
               // border: "1px solid #ccc",
             }}
           >
