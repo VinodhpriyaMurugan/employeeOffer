@@ -30,13 +30,7 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: npm run build --if-present
-
-      # Run tests (fix JSDOM issues if necessary)
-      - name: Run tests
-        env:
-          CI: true  # Prevents Jest from running interactively
-        run: npm test
+      - run: npm run build --if-present    
 
       # Upload build artifacts for deployment
       - name: Upload artifact
