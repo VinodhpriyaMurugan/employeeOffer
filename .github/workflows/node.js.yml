@@ -33,11 +33,15 @@ jobs:
       - run: npm run build --if-present    
 
       # Upload build artifacts for deployment
+      - name: Delete previous artifact
+        uses: geekyeggo/delete-artifact@v2
+        with:
+          name: github-pages  # This must match the artifact name used in upload
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./build  
-          overwrite: true
+          name: github-pages    
 
   deploy:
     needs: build
